@@ -1,0 +1,12 @@
+file_path:
+
+  all_rxn_dict: data/kegg/all_rxn_dict.json
+  all_cpd_dict: data/kegg/all_cpd_dict.json
+
+  # Yield
+  ecoli_dir: data/theoretical_yield/ecoli
+  yeast_dir: data/theoretical_yield/yeast
+
+
+
+

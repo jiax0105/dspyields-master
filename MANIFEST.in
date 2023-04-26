@@ -1,0 +1,3 @@
+include dspyields/config/config.yaml
+include dspyields/data/theoretical_yield/ecoli/*
+include dspyields/data/theoretical_yield/yeast/*

@@ -1,0 +1,46 @@
+### Copyright (C) 2023, Digital Signal Processing (DSP) Laboratory,
+### Tianjin University (TJU).
+### All rights reserved.
+
+## General information:
+This package is designed to calculate the maximum possible theoretical yield of target reaction from a pathway composed of a list of KEGG reactions. The package offers the option to choose between two organisms: E. coli and yeast.
+
+------------------------
+## Organisms and Models
+The package contains two sets of models, one for E. coli and another for yeast. E. coli models include a total of 58 models from the BiGG database, while the yeast models include 2 models.
+
+------------------------
+## Requirements
+This package requires Python 3.8 or higher and the following Python libraries:
+
+- path == 15.1.2
+- requests == 2.27.1
+- rdkit == 2022.9.5
+- cobra == 0.25.0
+
+-------------------------
+## Usage
+This package takes three inputs: a list of KEGG reactions, organism, and model.
+    
+    from dspyields import maximum_yield
+
+    kegg_pathway = ['R01788', 'R02737', 'R02780', 'R02628', 'R00724']
+    organism = "ecoli"
+    model = "iJO1366.xml"
+
+    maximum_yield(kegg_pathway, organism, model)
+
+-------------------------
+## Input
+     1. `PATHWAY`: The pathway containing a list of reactions denoted by KEGG identifiers.
+     2. `ORGANISM`: The organism to use. Valid options are ecoli for E. coli and yeast for S. cerevisiae.
+     3. `MODEL`: The metabolic model for the selected organism. For E. coli, there are 58 models, while for S. cerevisiae, it contain 2 models.
+Note: Each model is stored in a separate file using the SBML format and have the .xml extension.  
+
+-------------------------
+## Output
+The package outputs the maximum theoretical yield of the target reaction for the given pathway.
+
+-------------------------
+## License
+This package is released under the MIT License.
